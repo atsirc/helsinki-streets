@@ -1,6 +1,8 @@
-import credentials from './config.mjs';
-const geojson = await fetch('./locations.geojson').then( res => res.json());
+import credentials from './config.js';
+//const geojson = await fetch('./locations.geojson').then( res => res.json());
+const geojson = await fetch('https://raw.githubusercontent.com/atsirc/helsinki-streets/main/locations.geojson').then( response => response.json());
 import createPopup from './popup.js';
+
 const map = new maplibregl.Map({
    container: 'map',
    style: `https://api.maptiler.com/maps/${credentials.style}/style.json?key=${credentials.key}`,
