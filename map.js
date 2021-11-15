@@ -58,7 +58,7 @@ map.on('load', () => {
        const properties = e.features[0].properties;
        let flying = true;
        map.flyTo({
-         center: [coordinates[0], coordinates[1] + 0.00035],
+         center: [coordinates[0], coordinates[1] + 0.00038],
          zoom: 18
        });
 
