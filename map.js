@@ -29,7 +29,7 @@ map.addControl(
 );
 
 map.on('load', () => {
-   map.loadImage('map_marker_2.png', (error, image) => {
+   map.loadImage('assets/map_marker_2.png', (error, image) => {
      if (error) {
        throw error;
      }
