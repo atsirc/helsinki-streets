@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km0000nlw8",
+      "comments": "Purettu."
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96536,60.18745]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:000001ep",
+      "comments": "Kuva otettu 1911-1933 välillä. Purettu."
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96567,60.18800]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km0000pda0",
+      "comments": "Purettu."
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96528,60.18770]
+    }
+  }
+  ]
+}
