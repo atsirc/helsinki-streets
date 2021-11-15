@@ -33,6 +33,94 @@
       "type": "Point",
       "coordinates": [24.96528,60.18770]
     }
+  },
+    {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km002xm1",
+      "comments": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96585,60.18802]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km0000pdad",
+      "comments": "Purettu."
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96526,60.18748]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km0000pgxn",
+      "comments": "Ajankohta: 1927 - 1928"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96716,60.18865]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km003z68",
+      "comments": "Ajankohta: 1933 jälkeen"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96805,60.18644]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km002xlw",
+      "comments": "Ajankohta: 1933 jälkeen"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96614,60.18803]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km002xlr",
+      "comments": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96591,60.18793]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km002xlk",
+      "comments": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96583,60.18785]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km002xjp",
+      "comments": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96575,60.18777]
+    }
   }
   ]
 }

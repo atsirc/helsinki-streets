@@ -11,8 +11,7 @@ export default async function createPopup (map,  properties, coordinates) {
       `<img src="${src}" width="100%"/>
        <h1>${records['title']}</h1>
        <p><b>kommentit:</b> ${properties.comments}</p>
-       <p><b>tagit:</b> ${records['subjects'].join(", ")}</p>
-       <p>linkki parempaan kuvaan: <a href="${link}" target="_blank">${link}</a></p>
-    `)
-    .addTo(map);
+       <p><b>asiansanat:</b> ${records['subjects'].join(", ")}</p>
+       <p><b>linkki parempaan kuvaan:</b> <a href="${link}" target="_blank">${link}</a></p>
+    `).addTo(map);
 }

@@ -1,6 +1,6 @@
 import credentials from './config.js';
-//const geojson = await fetch('./locations.geojson').then( res => res.json());
-const geojson = await fetch('https://raw.githubusercontent.com/atsirc/helsinki-streets/main/locations.geojson').then( response => response.json());
+const geojson = await fetch('./locations.geojson').then( res => res.json());
+//const geojson = await fetch('https://raw.githubusercontent.com/atsirc/helsinki-streets/main/locations.geojson').then( response => response.json());
 import createPopup from './popup.js';
 
 const map = new maplibregl.Map({
@@ -38,7 +38,7 @@ map.on('load', () => {
        'type': 'geojson',
        'data': geojson,
        'cluster': true,
-       'clusterMaxZoom': 2,
+       'clusterMaxZoom': 10,
        'clusterRadius': 50
      });
 
@@ -58,8 +58,8 @@ map.on('load', () => {
        const properties = e.features[0].properties;
        let flying = true;
        map.flyTo({
-         center: [coordinates[0], coordinates[1] + 0.00070],
-         zoom: 17
+         center: [coordinates[0], coordinates[1] + 0.00035],
+         zoom: 18
        });
 
        map.on('moveend', function(ev){
