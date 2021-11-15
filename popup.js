@@ -10,8 +10,8 @@ export default async function createPopup (map,  properties, coordinates) {
     .setHTML(
       `<img src="${src}" width="100%"/>
        <h1>${records['title']}</h1>
-       <p><b>kommentit:</b> ${properties.comments}</p>
        <p><b>asiansanat:</b> ${records['subjects'].join(", ")}</p>
-       <p><b>linkki parempaan kuvaan:</b> <a href="${link}" target="_blank">${link}</a></p>
+       <p><b>kuvaaja: </b> ${records['nonPresenterAuthors'].map(n => n.name).join(", ")}</p>
+       <p><b>alkuperä:</b> <a href="${link}" target="_blank">Helsingin kaupunginmuseo</a></p>
     `).addTo(map);
 }

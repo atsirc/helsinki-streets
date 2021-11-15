@@ -82,7 +82,7 @@
     "type": "Feature",
     "properties": {
       "id": "hkm.HKMS000005:km002xlw",
-      "comments": "Ajankohta: 1933 jälkeen"
+      "comments": ""
     },
     "geometry": {
       "type": "Point",
@@ -120,6 +120,139 @@
     "geometry": {
       "type": "Point",
       "coordinates": [24.96575,60.18777]
+    }
+  },
+  
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:000008ml",
+      "comments": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96523,60.18829]
+    }
+  },
+    {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km0000pkrz",
+      "comments": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96393,60.18846]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km002mpg",
+      "comments": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96392,60.18808]
+    }
+  },
+    {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:000000st",
+      "comments": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96415,60.18774]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km0000pd83",
+      "comments": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96487,60.18787]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km0000pd86",
+      "comments": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96385,60.18796]
+    }
+  },
+    {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km0000pd8c",
+      "comments": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96395,60.18790]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km0000pd80",
+      "comments": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96431,60.18792]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km0000n7cw",
+      "comments": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96366,60.18795]
+    }
+  },
+    {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km0000pd8v",
+      "comments": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96471,60.18777]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km0000pd72",
+      "comments": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96461,60.18786]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "hkm.HKMS000005:km0000oroq",
+      "comments": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [24.96888,60.18707]
     }
   }
   ]
