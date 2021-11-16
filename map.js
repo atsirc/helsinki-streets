@@ -4,15 +4,16 @@ const geojson = await fetch('./locations.geojson').then( res => res.json());
 import createPopup from './popup.js';
 const map = new maplibregl.Map({
    container: 'map',
-   //style: `https://api.maptiler.com/maps/${credentials.style}/style.json?key=${credentials.key}`,
-   style: './assets/style.json',
+   style: `https://api.maptiler.com/maps/${credentials.style}/style.json?key=${credentials.key}`,
+   //style: './assets/style_mb.json',
+   //style: 'http://tiles.hel.ninja/styles/hel-osm-light/style.json',
+   //style: 'mapbox://styles/christanicole/ckvnmcitsd56h14nnpmh7lzhz',
    accessToken: credentials.mb_token,
    center: [24.93815, 60.18105],
    zoom: 12,
    minZoom: 12,
    maxZoom: 18 
 });
-
  // Add geolocate control to the map.
 map.addControl(
   new maplibregl.GeolocateControl({
@@ -37,7 +38,7 @@ map.on('load', () => {
        'type': 'geojson',
        'data': geojson,
        'cluster': true,
-       'clusterMaxZoom': 10,
+       'clusterMaxZoom': 14,
        'clusterRadius': 50
      });
 

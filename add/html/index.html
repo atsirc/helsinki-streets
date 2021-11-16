@@ -1,8 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Add locations</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <style rel="css/stylesheet">
+      body {
+        font-size: 20px;
+      }
+      form {
+        display: block;
+        margin: auto;
+        width: 500px;
+        margin-top: 100px;
+      }
+      span {
+        display: inline-block;
+      }
+      input[type=text] {
+        margin-top: 20px;
+        line-height: 2rem;
+      }
+      button {
+        margin-top: 40px;
+        height: 40px;
+        width: 300px;
+      }
+  </style>
   </head>
   <body>
     <form name="add" method="POST" action="/add-point">
