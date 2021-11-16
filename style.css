@@ -41,9 +41,12 @@
    position: fixed;
  }
  @media screen and (orientation: portrait) and (max-width: 1199px) {
+
    .maplibregl-popup-content {
-     max-width: 80vw;
+    max-width: 80vw;
+
    }
+
  }
  @media screen and (orientation: landscape) and (max-width: 1000px) {
    .maplibregl-popup-content {

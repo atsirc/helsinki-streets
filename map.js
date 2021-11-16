@@ -2,12 +2,11 @@ import credentials from './config.js';
 const geojson = await fetch('./locations.geojson').then( res => res.json());
 //const geojson = await fetch('https://raw.githubusercontent.com/atsirc/helsinki-streets/main/locations.geojson').then( response => response.json());
 import createPopup from './popup.js';
-
 const map = new maplibregl.Map({
    container: 'map',
-   style: `https://api.maptiler.com/maps/${credentials.style}/style.json?key=${credentials.key}`,
-   //style: './assets/style.json',
-   //accessToken: credentials.mb_token,
+   //style: `https://api.maptiler.com/maps/${credentials.style}/style.json?key=${credentials.key}`,
+   style: './assets/style.json',
+   accessToken: credentials.mb_token,
    center: [24.93815, 60.18105],
    zoom: 12,
    minZoom: 12,
@@ -27,7 +26,7 @@ map.addControl(
     showAccuracyCircle: false
   })
 );
-
+map.addControl( new maplibregl.NavigationControl(), 'top-right')
 map.on('load', () => {
    map.loadImage('assets/map_marker_2.png', (error, image) => {
      if (error) {
@@ -54,11 +53,12 @@ map.on('load', () => {
   // When a click event occurs on a feature in the places layer, open a popup at the
   // location of the feature, with description HTML from its properties.
      map.on('click', 'unclustered-point', function (e) {
+       console.log(e);
        const coordinates = e.features[0].geometry.coordinates.slice();
        const properties = e.features[0].properties;
        let flying = true;
        map.flyTo({
-         center: [coordinates[0], coordinates[1] + 0.00038],
+         center: [coordinates[0], coordinates[1]],
          zoom: 18
        });
 
