@@ -4,7 +4,7 @@ export default async function createPopup (map,  properties, coordinates) {
   const records = json.records[0];
   const src = `https://api.finna.fi/Cover/Show?id=${properties.id}&size=small`;
   const link = `https://www.helsinkikuvia.fi/search/details/?image_id=${records.id}`;
-  const markerHeight = map.getCanvas().height * .4;
+  const markerHeight = window.innerHeight*.4;
   const popupOffsets = {
     'top': [0, 0],
     'top-left': [0,0],

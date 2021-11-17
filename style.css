@@ -1,55 +1,58 @@
- @import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@300;500&family=Raleway:ital,wght@0,300;0,500;1,300&display=swap');
- body {
-   margin: 0;
-   padding: 0;
-   font-family: 'Montagu Slab', serif;
- }
- h1 {
-   font-size:1.50rem;
-   font-family: 'Montagu Slab';
-   line-height: 1.2;
-   font-weight: 500;
-   color: darkgoldenrod;
-   
- }
- p {
-   font-family: 'Raleway', sans-serif;
-   font-weight: 300;
-   font-size: 1rem;
-   margin-bottom: 0;
- }
-	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
- .maplibregl-popup {
-   padding-top: 10px;
-   background-color: white;
-   box-shadow: 0 0 20px #222;
- }
- .maplibregl-popup-content {
-   max-height: 77vh;
-   overflow-y: auto;
-   max-width: 	35vw;
-   overflow-x: hidden;
-   box-shadow: none !important;
-   scrollbar-color: grey white;
-   padding: 0 10px;
- }
- .mapboxgl-popup-close-button {
-   font-size: 2rem;
-   font-family: 'Railway';
-   font-weight: 500;
-   background-color: rgba(256,256,256,1) !important;
-   position: fixed;
- }
- @media screen and (orientation: portrait) and (max-width: 1199px) {
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@300;500&family=Raleway:ital,wght@0,300;0,500;1,300&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montagu Slab', serif;
+}
+h1 {
+  font-size:1.50rem;
+  font-family: 'Montagu Slab';
+  line-height: 1.2;
+  font-weight: 500;
+  color: darkgoldenrod;
+  
+}
+p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+ #map {
+  position: absolute; top: 0; bottom: 0; width: 100%;
+}
+.maplibregl-popup {
+  padding-top: 10px;
+  background-color: white;
+  z-index: 10;
+  box-shadow: 0 0 20px #222;
+}
+.maplibregl-popup-content {
+  max-height: 77vh;
+  overflow-y: auto;
+  max-width: 	35vw;
+  overflow-x: hidden;
+  box-shadow: none !important;
+  scrollbar-color: grey white;
+  padding: 0 10px;
+}
+.mapboxgl-popup-close-button {
+  font-size: 2rem;
+  font-family: 'Railway';
+  font-weight: 500;
+  background-color: rgba(256,256,256,1) !important;
+  position: fixed;
+}
+@media screen and (orientation: portrait) and (max-width: 1199px) {
 
-   .maplibregl-popup-content {
-    max-width: 80vw;
+  .maplibregl-popup-content {
+   max-width: 80vw;
 
-   }
+  }
 
- }
- @media screen and (orientation: landscape) and (max-width: 1000px) {
-   .maplibregl-popup-content {
-     max-width: 50vw;
-   }
- }
+}
+@media screen and (orientation: landscape) and (max-width: 1000px) {
+  .maplibregl-popup-content {
+    max-width: 50vw;
+  }
+}
