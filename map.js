@@ -1,6 +1,5 @@
 import credentials from './config.js';
 const geojson = await fetch('./locations.geojson').then( res => res.json());
-console.log(geojson);
 //const geojson = await fetch('https://raw.githubusercontent.com/atsirc/helsinki-streets/main/locations.geojson').then( response => response.json());
 import createPopup from './popup.js';
 const map = new maplibregl.Map({
@@ -13,7 +12,7 @@ const map = new maplibregl.Map({
    center: [24.93815, 60.18105],
    zoom: 12,
    minZoom: 12,
-   maxZoom: 18 
+   maxZoom: 19 
 });
  // Add geolocate control to the map.
 map.addControl(
