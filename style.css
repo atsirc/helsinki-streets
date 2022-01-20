@@ -18,9 +18,9 @@ p {
   font-size: 1rem;
   margin-bottom: 0;
 }
-a {
+.mapboxgl-popup-content a {
   font-weight: 500;
-  color: #2222;
+  color: #222;
 }
 a:visited {
   color: olive;
