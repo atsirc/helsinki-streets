@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: https://rekryjscloud.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_903031775cae4ab6b27f43da42fcf579 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_d4580ee07fa44663b24e8c268cab6929 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_e6762b0893394a119a1e52ac857d5eb8 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_147869ce929945f68874224f3fe6f0fa }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: rekryjscloud.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_903031775cae4ab6b27f43da42fcf579 }}/christas2docker:${{ github.sha }}
+        tags: rekryjscloud.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_e6762b0893394a119a1e52ac857d5eb8 }}/christas2docker:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'christas2docker'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_1bd2b41312f944cc8ff51cf6e2393891 }}
-        images: 'rekryjscloud.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_903031775cae4ab6b27f43da42fcf579 }}/christas2docker:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_0b4639b0990c4188ad4e017ea97d9759 }}
+        images: 'rekryjscloud.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_e6762b0893394a119a1e52ac857d5eb8 }}/christas2docker:${{ github.sha }}'
