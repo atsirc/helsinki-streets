@@ -18,7 +18,10 @@ p {
   font-size: 1rem;
   margin-bottom: 0;
 }
- #map {
+a:visited {
+  color: olive;
+}
+#map {
   position: absolute; top: 0; bottom: 0; width: 100%;
 }
 .maplibregl-popup {
