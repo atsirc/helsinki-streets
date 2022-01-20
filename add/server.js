@@ -15,7 +15,7 @@ app.post('/add-point', (request, response) => {
   const body = request.body;
   let link = body.link
   link = link.split('=')[1];
-  const tmp_coord = body.coordinates.split(/ *[,:] */);
+  const tmp_coord = body.coordinates.replace(' ', '').split(/ *[,:] */);
 
   if (!link || link.indexOf('hkm') < 0) {
     response.send('wrong input')
