@@ -4,6 +4,7 @@ const GeoJSON = require('geojson');
 const locations =  JSON.parse( fs.readFileSync('./../locations.geojson', 'utf8') )
 const app = express()
 let count = 0;
+let allLocations = locations.features.length;
 const PORT = process.env.PORT || 3002
 
 app.use(express.urlencoded({ extended: true }));
@@ -37,7 +38,7 @@ app.post('/add-point', (request, response) => {
       console.log(`Error writing file: ${err}`);
     } else {
         count += 1;
-        console.log(`Add count since server was started: ${count}`);
+      console.log(`Add count since server was started: ${count}, all locations: ${allLocations+count}`);
     }
   });
 

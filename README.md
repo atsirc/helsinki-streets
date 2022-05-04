@@ -3,11 +3,10 @@ Web app displaying Helsinki City Museum's photographs on a map. Using the Finna.
 
 Created with MapLibre Gl JS and MapTiles, as well some traditional HTML and JS.
   
-Example (probably not up to date) [https://dfdkl.com/karttest/](https://dfdkl.com/karttest/)
-
 # Test app in browser
 
-run ´´´docker build -t karttest .´´´ 
-then ´´´docker run -p 81:80 karttest´´´,
+run ```docker build -t karttest .```
+  
+then ```docker run -p 81:80 karttest```
   
 open http://localhost:81 in browser
