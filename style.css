@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@300;500&family=Raleway:ital,wght@0,300;0,500;1,300&display=swap');
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Montagu Slab', serif;
 }
+
 h1 {
   font-size:1.50rem;
   font-family: 'Montagu Slab';
@@ -12,13 +14,32 @@ h1 {
   color: darkgoldenrod;
   
 }
+
 p {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
   font-size: 1rem;
   margin-bottom: 0;
 }
- #map {
+ #map
+.mapboxgl-popup-content a {
+  font-weight: 500;
+  color: darkgoldenrod;
+}
+
+a:visited {
+  color: olive;
+}
+
+a:active {
+  color: #005858;
+}
+
+a:hover {
+  color: darkcyan;
+}
+
+#map {
   position: absolute; top: 0; bottom: 0; width: 100%;
 }
 .maplibregl-popup {
@@ -33,7 +54,7 @@ p {
   max-width: 	35vw;
   overflow-x: hidden;
   box-shadow: none !important;
-  scrollbar-color: grey white;
+  scrollbar-color: #776 white;
   padding: 0 10px;
 }
 .mapboxgl-popup-close-button {
