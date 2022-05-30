@@ -21,6 +21,7 @@ p {
   font-size: 1rem;
   margin-bottom: 0;
 }
+
  #map
 .mapboxgl-popup-content a {
   font-weight: 500;
@@ -35,8 +36,8 @@ a:active {
   color: #005858;
 }
 
-a:hover {
-  color: darkcyan;
+.mapboxgl-popup-content a:hover {
+  color: darkcyan !important;
 }
 
 #map {
@@ -65,12 +66,10 @@ a:hover {
   position: fixed;
 }
 @media screen and (orientation: portrait) and (max-width: 1199px) {
-
   .maplibregl-popup-content {
    max-width: 80vw;
 
   }
-
 }
 @media screen and (orientation: landscape) and (max-width: 1000px) {
   .maplibregl-popup-content {

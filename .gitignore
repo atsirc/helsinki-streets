@@ -1,3 +1,9 @@
-config.mjs
-config.js
+add/
 node_modules/
+config.js
+config.mjs
+test.http
+assets/LICENSE.TXT
+assets/license.txt
+assets/style.json
+assets/style_mb.json
