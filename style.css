@@ -44,7 +44,6 @@ a:active {
   position: absolute; top: 0; bottom: 0; width: 100%;
 }
 .maplibregl-popup {
-  padding-top: 10px;
   background-color: white;
   z-index: 10;
   box-shadow: 0 0 20px #222;
@@ -57,13 +56,22 @@ a:active {
   box-shadow: none !important;
   scrollbar-color: #776 white;
   padding: 0 10px;
+  margin-top: 10px;
 }
 .mapboxgl-popup-close-button {
   font-size: 2rem;
   font-family: 'Railway';
   font-weight: 500;
-  background-color: rgba(256,256,256,1) !important;
+  border-radius: 0;
+  border: none;
+  padding: .2rem .45rem;
+  background-color: rgba(256,256,256,.5) !important;
   position: fixed;
+  margin: 10px 10px 0 0;
+}
+.mapboxgl-popup-close-button:hover {
+  background-color: rgba(256,256,256,8) !important;
+  box-shadow: 0 0 15px #ccc;
 }
 @media screen and (orientation: portrait) and (max-width: 1199px) {
   .maplibregl-popup-content {
