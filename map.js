@@ -18,7 +18,7 @@ const map = new maplibregl.Map({
 map.addControl(
   new maplibregl.GeolocateControl({
   positionOptions: {
-    enableHighAccuracy: true
+      enableHighAccuracy: true
     },
     fitBoundsOptions: {
       maxZoom:0 
@@ -53,8 +53,7 @@ map.on('load', () => {
      });
   // When a click event occurs on a feature in the places layer, open a popup at the
   // location of the feature, with description HTML from its properties.
-     map.on('click', 'unclustered-point', function (e) {
-       console.log(e);
+     map.on('click', 'unclustered-point', (ev) => {
        const coordinates = e.features[0].geometry.coordinates.slice();
        const properties = e.features[0].properties;
        let flying = true;
@@ -63,14 +62,15 @@ map.on('load', () => {
          zoom: 18
        });
 
-       map.on('moveend', function(ev){
+       map.on('moveend', (ev) => {
          if (flying) {
            createPopup(map, properties, coordinates);
            flying = false;
          }
        });
    });
-// Change the cursor to a pointer when the mouse is over the places layer.
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
      map.on('mouseenter', 'unclustered-point', function () {
        map.getCanvas().style.cursor = 'pointer';
      });
