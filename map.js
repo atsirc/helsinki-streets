@@ -1,7 +1,9 @@
 import credentials from './config.js';
-const geojson = await fetch('./locations.geojson').then( res => res.json());
-//const geojson = await fetch('https://raw.githubusercontent.com/atsirc/helsinki-streets/main/locations.geojson').then( response => response.json());
 import createPopup from './popup.js';
+const geojson = await fetch('./locations.geojson').then( res => res.json());
+//If not using continous deploymetn use the below setup instead.
+//const geojson = await fetch('https://raw.githubusercontent.com/atsirc/helsinki-streets/main/locations.geojson').then( response => response.json());
+
 const map = new maplibregl.Map({
    container: 'map',
    style: `https://api.maptiler.com/maps/${credentials.style}/style.json?key=${credentials.key}`,
@@ -14,6 +16,7 @@ const map = new maplibregl.Map({
    minZoom: 12,
    maxZoom: 19 
 });
+
  // Add geolocate control to the map.
 map.addControl(
   new maplibregl.GeolocateControl({
@@ -27,12 +30,16 @@ map.addControl(
     showAccuracyCircle: false
   })
 );
-map.addControl( new maplibregl.NavigationControl(), 'top-right')
+
+map.addControl( new maplibregl.NavigationControl(), 'top-right' );
+
+// Initialize
 map.on('load', () => {
    map.loadImage('assets/map_marker_2.png', (error, image) => {
      if (error) {
        throw error;
      }
+
      map.addImage('custom-marker', image);
      map.addSource('places', {
        'type': 'geojson',
@@ -51,11 +58,14 @@ map.on('load', () => {
          'icon-image': 'custom-marker'
        }
      });
-  // When a click event occurs on a feature in the places layer, open a popup at the
-  // location of the feature, with description HTML from its properties.
+
+     /**
+      * When a click event occurs on a feature in the places layer, open a popup at the
+      * location of the feature, with description HTML from its properties.
+      */
      map.on('click', 'unclustered-point', (ev) => {
-       const coordinates = e.features[0].geometry.coordinates.slice();
-       const properties = e.features[0].properties;
+       const coordinates = ev.features[0].geometry.coordinates.slice();
+       const properties = ev.features[0].properties;
        let flying = true;
        map.flyTo({
          center: [coordinates[0], coordinates[1]],
@@ -68,7 +78,7 @@ map.on('load', () => {
            flying = false;
          }
        });
-   });
+     });
 
     // Change the cursor to a pointer when the mouse is over the places layer.
      map.on('mouseenter', 'unclustered-point', function () {
