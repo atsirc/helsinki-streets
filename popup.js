@@ -1,5 +1,5 @@
 export default async function createPopup (map,  properties, coordinates) {
-  const response = await fetch(`https://api.finna.fi/v1/record?id=${properties.id}`)
+  const response = await fetch(`https://api.finna.fi/v1/record?id=${properties.id}`);
   const json = await response.json();
   const records = json.records[0];
   const src = `https://api.finna.fi/Cover/Show?id=${properties.id}&size=small`;
@@ -15,13 +15,14 @@ export default async function createPopup (map,  properties, coordinates) {
     'left': [0, markerHeight],
     'right': [0, markerHeight]
   };
+
   new maplibregl.Popup({maxWidth: 'none', focusAfterOpen: false, offset: popupOffsets })
     .setLngLat(coordinates)
     .setHTML(
       `<img src="${src}" width="100%"/>
        <h1>${records['title']}</h1>
-       <p><b>asiansanat:</b> ${records['subjects'].join(", ")}</p>
-       <p><b>kuvaaja: </b> ${records['nonPresenterAuthors'].map(n => n.name).join(", ")}</p>
        <p><b>alkuperä:</b> <a href="${link}" target="_blank">Helsingin kaupunginmuseo</a></p>
+       <p><b>kuvaaja: </b> ${records['nonPresenterAuthors'].map(n => n.name).join(", ")}</p>
+       <p><b>asiansanat:</b> ${records['subjects'].join(", ")}</p>
     `).addTo(map);
 }
