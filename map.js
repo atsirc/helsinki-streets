@@ -61,12 +61,13 @@ map.on('load', () => {
 
      /**
       * When a click event occurs on a feature in the places layer, open a popup at the
-      * location of the feature, with description HTML from its properties.
+      * location of the feature, with id for image properties.
       */
      map.on('click', 'unclustered-point', (ev) => {
        const coordinates = ev.features[0].geometry.coordinates.slice();
-       const properties = ev.features[0].properties;
+       const imageId = ev.features[0].properties.id;
        let flying = true;
+
        map.flyTo({
          center: [coordinates[0], coordinates[1]],
          zoom: 18
@@ -74,19 +75,19 @@ map.on('load', () => {
 
        map.on('moveend', (ev) => {
          if (flying) {
-           createPopup(map, properties, coordinates);
+           createPopup(map, imageId, coordinates);
            flying = false;
          }
        });
      });
 
     // Change the cursor to a pointer when the mouse is over the places layer.
-     map.on('mouseenter', 'unclustered-point', function () {
+     map.on('mouseenter', 'unclustered-point', () => {
        map.getCanvas().style.cursor = 'pointer';
      });
 
      // Change it back to a pointer when it leaves.
-     map.on('mouseleave', 'unclustered-point', function () {
+     map.on('mouseleave', 'unclustered-point', () => {
        map.getCanvas().style.cursor = '';
      });
    });
