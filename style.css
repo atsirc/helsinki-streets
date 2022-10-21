@@ -21,12 +21,6 @@ p {
   margin-bottom: 0;
 }
 
- #map
-.mapboxgl-popup-content a {
-  font-weight: 500;
-  color: darkgoldenrod;
-}
-
 a:visited {
   color: olive;
 }
@@ -35,18 +29,27 @@ a:active {
   color: #005858;
 }
 
+#map {
+  position: absolute; top: 0; bottom: 0; width: 100%;
+}
+
+#map .mapboxgl-popup-content a {
+  font-weight: 500;
+  color: darkgoldenrod;
+}
+
 .mapboxgl-popup-content a:hover {
   color: darkcyan !important;
 }
 
-#map {
-  position: absolute; top: 0; bottom: 0; width: 100%;
-}
 .maplibregl-popup {
   background-color: white;
   z-index: 10;
+  border-radius: .3rem;
   box-shadow: 0 0 20px #222;
+  padding: .5rem 0;
 }
+
 .maplibregl-popup-content {
   max-height: 77vh;
   overflow-y: auto;
@@ -54,9 +57,9 @@ a:active {
   overflow-x: hidden;
   box-shadow: none !important;
   scrollbar-color: #776 white;
-  padding: 0 10px;
-  margin-top: 10px;
+  padding: 0 .5rem;
 }
+
 .mapboxgl-popup-close-button {
   font-size: 2rem;
   font-family: 'Railway';
@@ -66,12 +69,18 @@ a:active {
   padding: .2rem .45rem;
   background-color: rgba(256,256,256,.5) !important;
   position: fixed;
-  margin: 10px 10px 0 0;
+  margin: .5rem .5rem 0 0;
 }
+
 .mapboxgl-popup-close-button:hover {
   background-color: rgba(256,256,256,8) !important;
   box-shadow: 0 0 15px #ccc;
 }
+
+.mapboxgl-popup-tip {
+  display: none;
+}
+
 @media screen and (orientation: portrait) and (max-width: 1199px) {
   .maplibregl-popup-content {
    max-width: 80vw;

@@ -46,7 +46,7 @@ map.on('load', () => {
        'data': geojson,
        'cluster': true,
        'clusterMaxZoom': 14,
-       'clusterRadius': 50
+       'clusterRadius': 45
      });
 
      map.addLayer({
@@ -73,9 +73,12 @@ map.on('load', () => {
          zoom: 18
        });
 
-       map.on('moveend', (ev) => {
+       map.on('moveend', async (ev) => {
          if (flying) {
-           createPopup(map, imageId, coordinates);
+           const popup = await createPopup(map, imageId, coordinates);
+           const el =  popup.getElement();
+           console.log(el)
+           el.style.top = (window.height - el.scrollHeight)/2 + "px";
            flying = false;
          }
        });
