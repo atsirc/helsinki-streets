@@ -76,9 +76,6 @@ map.on('load', () => {
        map.on('moveend', async (ev) => {
          if (flying) {
            const popup = await createPopup(map, imageId, coordinates);
-           const el =  popup.getElement();
-           console.log(el)
-           el.style.top = (window.height - el.scrollHeight)/2 + "px";
            flying = false;
          }
        });
