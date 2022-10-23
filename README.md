@@ -1,10 +1,12 @@
-# helsinki-streets
+# Working solution
 
-Web app displaying Helsinki City Museum's photographs on a map. Using the Finna.fi api (https://www.kiwi.fi/pages/viewpage.action?pageId=53839221). Focus is on changes in the city landscape.
+Visit the map **[here!](https://karttest.calmbush-bbb24782.northeurope.azurecontainerapps.io/ "Helsinki street map")**
   
-Created with MapLibre Gl JS and MapTiles, as well some traditional HTML and JS.
+# helsinki-streets - Muuttuva Helsinki
+
+This is web app displaying photographs from Helsinki City Museum's collection. Using the Finna.fi api (https://www.kiwi.fi/pages/viewpage.action?pageId=53839221). Focus is on changes in the city landscape.
   
-Visit site [here!](https://karttest.calmbush-bbb24782.northeurope.azurecontainerapps.io/ "Helsinki street map")
+Created with MapLibre Gl JS and MapTiles, as well some basic HTML, JS and Node stuff.
   
 # Test app in local environment
 
@@ -18,8 +20,7 @@ then ```docker run -p 81:80 karttest```
   
 open http://localhost:81 in browser
   
-# add & fixIds folders
+# add folder
   
-Both are hastily put together.
-The **add** folder contains code for adding points to geojson, while the **fixIds** was created to convert from older id's to newer. Possibly this was unnescessary.
-Both use a couple of node libraries.
+The add folder is a simple node based solution for adding points to the geojson.
+It also contains a method for updating the ids for the points, since it seems like the museum is changing the ids :(.
