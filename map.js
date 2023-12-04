@@ -1,7 +1,7 @@
 import credentials from './config.js';
 import createPopup from './popup.js';
 const geojson = await fetch('./locations.geojson').then( res => res.json());
-//If not using continous deploymetn use the below setup instead.
+//If not using continous deployment use the below setup instead.
 //const geojson = await fetch('https://raw.githubusercontent.com/atsirc/helsinki-streets/main/locations.geojson').then( response => response.json());
 
 const map = new maplibregl.Map({
@@ -24,7 +24,7 @@ map.addControl(
       enableHighAccuracy: true
     },
     fitBoundsOptions: {
-      maxZoom:0 
+      maxZoom: 0 
     },
     trackUserLocation: true,
     showAccuracyCircle: false
@@ -75,7 +75,7 @@ map.on('load', () => {
 
        map.on('moveend', async (ev) => {
          if (flying) {
-           const popup = await createPopup(map, imageId, coordinates);
+           await createPopup(map, imageId, coordinates);
            flying = false;
          }
        });

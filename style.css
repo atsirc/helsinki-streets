@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@300;500&family=Raleway:ital,wght@0,300;0,500;1,300&display=swap');
 
+::-webkit-scrollbar {
+  background: white;
+}
+::-webkit-scrollbar-thumb {
+  background: #776;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -30,7 +37,10 @@ a:active {
 }
 
 #map {
-  position: absolute; top: 0; bottom: 0; width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 #map .mapboxgl-popup-content a {
@@ -47,17 +57,17 @@ a:active {
   z-index: 10;
   border-radius: .3rem;
   box-shadow: 0 0 20px #222;
-  padding: .5rem 0;
+  padding: .7rem 0;
 }
 
 .maplibregl-popup-content {
-  max-height: 77vh;
+  max-height: 80vh;
   overflow-y: auto;
-  max-width: 	35vw;
+  max-width: 45vw;
   overflow-x: hidden;
   box-shadow: none !important;
   scrollbar-color: #776 white;
-  padding: 0 .5rem;
+  padding: 0 .7rem;
 }
 
 .mapboxgl-popup-close-button {
