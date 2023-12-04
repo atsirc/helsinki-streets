@@ -1,4 +1,5 @@
 export default async function createPopup (map, imageId, coordinates) {
+
   /*
    * Api get string building.
    *
@@ -10,6 +11,7 @@ export default async function createPopup (map, imageId, coordinates) {
   const domainName = 'https://api.finna.fi';
   const fieldStr = '&field[]=';
   const fields = [
+    '',
     'geoCenter',
     'id',
     'identifierString',
@@ -22,16 +24,14 @@ export default async function createPopup (map, imageId, coordinates) {
     'urls',
     'year',
   ];
-  const apiUrl = `${domainName}/v1/record?id=${imageId}${fieldStr}${fields.join(fieldStr)}`;
+  const apiUrl = `${domainName}/v1/record?id=${imageId}${fields.join(fieldStr)}`;
 
   // Get record
   const response = await fetch(apiUrl);
   const json = await response.json();
-  console.log(json);
   const record = json.records[0];
 
-  // Set up info for popup
-  // TODO: when it works again change large to small
+  // Setup info for popup
   const imageSrc = `${domainName.replace('api.','')}${record.imagesExtended[0].urls.small}`;
   const link = `https://www.helsinkikuvia.fi/search/details/?image_id=${imageId}`;
   const title = `${record.title} (${record.year})`;
@@ -60,9 +60,11 @@ export default async function createPopup (map, imageId, coordinates) {
   }).setLngLat(coordinates)
     .setHTML(
       `<img src="${imageSrc}" width="100%"/>
-       <h1>${title}</h1>
-       <p><b>Alkuperä:</b> <a href="${link}" target="_blank">Helsingin kaupunginmuseo</a></p>
-       <p><b>Kuvaaja:</b> ${photograpers}</p>
-       <p><b>Kuvaus:</b> ${description}</p>
+       <div class="textbox">
+         <h1>${title}</h1>
+         <p><b>Alkuperä:</b> <a href="${link}" target="_blank">Helsingin kaupunginmuseo</a></p>
+         <p><b>Kuvaaja:</b> ${photograpers}</p>
+         <p><b>Kuvaus:</b> ${description}</p>
+       </div>
     `).addTo(map);
 };

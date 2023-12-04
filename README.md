@@ -1,6 +1,6 @@
 # Working solution
 
-Visit the map **[here!](https://karttest.calmbush-bbb24782.northeurope.azurecontainerapps.io/ "Helsinki street map")**
+Visit the map **[here!](https://delightful-plant-0224b2303.4.azurestaticapps.net)**
   
 # helsinki-streets - Muuttuva Helsinki
 
@@ -22,5 +22,5 @@ open http://localhost:81 in browser
   
 # add folder
   
-The add folder is a simple node based solution for adding points to the geojson.
-It also contains a method for updating the ids for the points, since it seems like the museum is changing the ids :(.
+The add folder is an extremely simple (= made without too much thought) node based solution for adding points to the geojson.
+It also contains a method for updating the ids for the points, since it at one point in time seemed like the museum was changing the ids :(.

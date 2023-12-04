@@ -20,7 +20,7 @@ app.post('/add-point', (request, response) => {
   }
 });
 
-app.get('/fix-ids', async (request, response) => {
+app.get('/fix-ids', async (_request, response) => {
   const updatedIds = await updateIds(locations);
   updateFile(filePath, updatedIds);
   response.redirect('/');
