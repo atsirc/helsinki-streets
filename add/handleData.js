@@ -8,7 +8,7 @@ const addPoint = (request, locations) => {
   const body = request.body;
   const link = body.link;
   const imageId = link.split('=')[1];
-  const tmp_coord = body.coordinates.replace(' ', '').split(/ *[,:] */);
+  const tmp_coord = body.coordinates.replace(/[ \(\)]/g, '').split(/ *[,:] */);
 
   if (!imageId || imageId.indexOf('hkm') < 0) {
     throw new Error('Wrong input');
